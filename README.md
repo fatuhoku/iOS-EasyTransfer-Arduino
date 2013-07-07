@@ -125,6 +125,10 @@ Follow the code examples on [EasyTransfer's home page][2].
 No worries, just [file an issue on GitHub][5]. Better still, find out the issue
 and submit a pull request.
 
+## License
+
+MIT
+
 
 [1]: http://www.redpark.com/c2ttl.html
 [2]: http://www.billporter.info/2011/05/30/easytransfer-arduino-library/
