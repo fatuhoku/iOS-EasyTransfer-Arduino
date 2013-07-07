@@ -1,5 +1,5 @@
 iOS Port of the EasyTransfer Arduino Library
-============================================
+--------------------------------------------
 
 Easy serial communications between [iOS devices][3] and [Arduinos][4] via a
 [RedPark serial cable][5].
@@ -12,7 +12,7 @@ was Arduino-to-Arduino communications only, to the iOS, we are now able to
 transfer structured data (namely C-structs) between the iOS device and the
 Arduino with very few lines of code.
 
-## Getting started
+### Getting started
 
 To use, just copy `ArduinoEasyTransfer.{h,m}` into your project and make sure
 that `ArduinoEasyTransfer.m` has been the application/library target's `Compile
@@ -122,12 +122,12 @@ data. We use EasyTransfer to make sense of it:
 
 Follow the code examples on [EasyTransfer's home page][2].
 
-## In case of trouble...
+### In case of trouble...
 
 No worries, just [file an issue on GitHub][5]. Better still, find out the issue
 and submit a pull request.
 
-## License
+### License
 
 MIT
 
