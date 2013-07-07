@@ -129,11 +129,11 @@ and submit a pull request.
 
 ### License
 
-MIT
-
+[The MIT License (MIT)][6]
 
 [1]: http://www.redpark.com/c2ttl.html
 [2]: http://www.billporter.info/2011/05/30/easytransfer-arduino-library/
 [3]: http://en.wikipedia.org/wiki/IDevice
 [4]: http://www.redpark.com/products.html
 [5]: https://github.com/fatuhoku/iOS-EasyTransfer-Arduino/issues
+[6]: http://pankaj.mit-license.org/
