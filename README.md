@@ -57,7 +57,6 @@ protocol:
   RscMgr *rscMgr;
   ArduinoEasyTransfer *txTransfer;
   ArduinoEasyTransfer *rxTransfer;
-  id <RscMgrDelegate> delegate;
 }
 ...
 @end
@@ -76,8 +75,8 @@ You'll want to initialise these the following way:
 
 -(id)init {
   if(self = [super init]) {
-    RscMgr *rscMgr = [[RscMgr alloc] init];
-    [self.rscMgr setDelegate:delegate];
+    rscMgr = [[RscMgr alloc] init];
+    [rscMgr setDelegate:self];
     txTransfer = [[ArduinoEasyTransfer alloc] initWithSize:sizeof(typeof(struct iDeviceToArduino))];
     rxTransfer = [[ArduinoEasyTransfer alloc] initWithSize:sizeof(typeof(struct ArduinoToIDevice))];
   }
@@ -93,6 +92,7 @@ You'll want to initialise these the following way:
 
 ```
 // Foobar.m
+
   ...
   struct iDeviceToArduino txMessage = { 1, 2.0f, 'c', {10,20}};
   [txTransfer sendDataWith:rscMgr bytes:(void *)txMessage];
@@ -105,6 +105,8 @@ Just implement `readBytesAvailable:` so that we're told about any incoming
 data. We use EasyTransfer to make sense of it:
 
 ```
+// Foobar.m
+
 - (void)readBytesAvailable:(UInt32)numBytes {
   ...
   struct iDeviceToArduino rxMessage;
