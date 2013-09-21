@@ -23,7 +23,7 @@ Sources`.
 These structs should be accessible from the Objective-C code as well as Arduino code,
 so it's convenient to stick them all in one header file. Let's call it `data.h`.
 
-```
+```objc
 // data.h
 
 struct XYCoordinates {
@@ -50,7 +50,7 @@ Let's say we've define a class `Foobar` that handles serial communications.  To
 handle events from the Redpark cable it must conform to the `RscMgrDelegate`
 protocol:
 
-```
+```objc
 // Foobar.h
 
 @interface Foobar : NSObject <RscMgrDelegate> {
@@ -64,7 +64,7 @@ protocol:
 
 You'll want to initialise these the following way:
 
-```
+```objc
 // Foobar.m
 
 #import "ArduinoEasyTransfer.h"
@@ -90,7 +90,7 @@ You'll want to initialise these the following way:
 
 #### Sending data
 
-```
+```objc
 // Foobar.m
 
   ...
@@ -104,7 +104,7 @@ You'll want to initialise these the following way:
 Just implement `readBytesAvailable:` so that we're told about any incoming
 data. We use EasyTransfer to make sense of it:
 
-```
+```objc
 // Foobar.m
 
 - (void)readBytesAvailable:(UInt32)numBytes {
